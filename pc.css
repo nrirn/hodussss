@@ -202,14 +202,14 @@ header #header-bar #header-top-notice strong.notice-badge {
 }
 
 #board-info #viewers-area #viewers:before {
-  content: url(https://nrirn.github.io/10ming_CSS/tsu_01.png);
+  content: url(https://nrirn.github.io/hodussss/tsu_01.png);
   position: relative;
   top: 9px;
   left: -4px;
 }
 
 #board-info #viewers-area #viewers:after {
-  content: url(https://nrirn.github.io/10ming_CSS/tsu_02.png);
+  content: url(https://nrirn.github.io/hodussss/tsu_02.png);
   cursor: text;
   position: relative;
   top: 3px;
@@ -373,7 +373,7 @@ span.a-badge i.fa.fa-star { animation: rotation 2s infinite; }
 /* 트게더 메인으로(높낮이포함) */
 header .row>div:nth-child(1)>a {
     background-repeat: no-repeat;
-    background-image: url(https://nrirn.github.io/10ming_CSS/main.png);
+    background-image: url(https://nrirn.github.io/hodussss/main.png);
     background-size: 140px;
     width: 140px;
     height: 50px;
@@ -391,7 +391,7 @@ header .row>div:nth-child(1)>a img {
 
 /* 타이틀 이미지  */
 #board-info > h1 > a::before {
-    content: url(https://nrirn.github.io/10ming_CSS/logo.png);
+    content: url(https://nrirn.github.io/hodussss/logo.png);
     left: 500px;
     top: 5px;
     position: absolute;
@@ -465,7 +465,7 @@ div #article-list #boardSearchForm>input[type=text]:focus {
 #movetotop {
     display: inline-block;
     opacity: 1;
-    background: url(https://nrirn.github.io/10ming_CSS/gototop_01.png);
+    background: url(https://nrirn.github.io/hodussss/gototop_01.png);
     width: 220px;
     height: 350px;
     background-size: contain;
