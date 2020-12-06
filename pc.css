@@ -1,29 +1,472 @@
-:root {
+/* 폰트 */
+@font-face { font-family: 'BMEULJIRO'; 
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff'); 
+  font-weight: normal; 
+  font-style: normal; 
+}
 
-  --color-0: #ffffff; /* box color */
-
-
-
-  --color-1: #cceecc; /* */
-
-  --color-2: #e3f1af; /* */
-
-  --color-3: #4bc84b; /* main color */
-
-  --color-4: #71da35; /* sub  color */
-
-  --color-5: #cff1af; /* */
-
+@font-face {
+  font-family: 'Cafe24Ohsquare';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
 
-header #header-bar > .row {
 
-    padding-top: 0.3em; padding-bottom: 0.3em; border-top: 4px solid var(--color-5);
 
-    background: -webkit-linear-gradient(45deg, var(--color-3) 0%,var(--color-5) 11%,var(--color-2) 100%);
 
-    border-bottom: 2px solid var(--color-1); border-right: 2px solid var(--color-1) 
+/* 배경 그라디언트 */
+html {
+    height: auto !important;
+    background: linear-gradient(to bottom, #a3aaae, #a3aaae, #a3aaae);
+}
 
+body {
+    background: transparent;
+}
+
+
+
+/* 프사 위치 이동 */
+#board-info #board-info-profile-img {
+    width: 90px;
+    height: 90px;
+    background: url('https://thispersondoesnotexist.com/image');
+    position: absolute;
+    top: 16px;
+    left: 30px;
+    border-radius: 5%;
+}
+/* 프사 확대 효과 */
+img#board-info-profile-img:hover {
+    z-index: 1;
+    transform: scale(4);
+    transition: transform 1.2s;
+}
+
+
+
+/* 상단 검색창 */
+header #right-search-form>input[type=text] {
+ border-color:#5b6770;
+ border-radius:0.4em;
+ font-size: 14px;
+}
+
+header #right-search-form>input[type=text]::placeholder {
+ color:#5b6770 !important;
+}
+
+header #right-search-form>input[type=text]:focus {
+ box-shadow:0 0 20px #5b6770 !important;
+}
+
+header #right-search-form>input[type=text]:focus::placeholder {
+ color:transparent !important;
+}
+
+header #right-search-form>#right-search-btn {
+ color:#5b6770 !important;
+}
+
+
+
+/* 테이블 쉐도우, 테두리 */
+#header-bar>.row,
+#main-content>.frame,
+#main-menu>div {
+ box-shadow:3px 3px 10px 0 rgba(0,0,0,.25);
+ border-radius:7px
+}
+
+.btn.square {
+ border-radius:7px
+}
+
+#main-menu>div {
+ overflow:hidden
+}
+
+#article-list>.article-list-row,
+#main #main-content>div.frame,
+#main .menu-wrapper,
+header #header-bar>.row {
+ border-right:none;
+ border-bottom:none
+}
+
+
+#article-content-wrapper>.header{
+  background-color:#5b6770;
+  border-radius: 10px 10px 0px 0px;
+  border-color: #5b6770
+}
+
+
+
+
+
+/* 헤더 */
+#article-list>.article-list-row:nth-of-type(2),
+header #header-bar>.row {
+ border-top-color:#5b6770
+}
+
+a:hover,
+header #header-bar a.dropdown-toggle {
+ color:#5b6770
+}
+
+header #header-bar #header-top-notice strong.notice-badge {
+    background: #5b6770;
+    padding: 4px 6px;
+    color: #fff;
+    font-weight: bold
+}
+
+
+
+
+/* 좌측 메뉴 */
+#main .menu-wrapper>.header,
+.btn-primary,
+.btn-primary:hover {
+ background-color:#5b6770
+}
+
+#main-menu {
+ position:-webkit-sticky;
+ position:sticky;
+ top:10px
+}
+
+#main .menu-wrapper .spacer {
+    background: #5b6770;
+    height: 1px;
+}
+
+
+
+
+
+
+
+
+/* 프사 */
+
+#board-info {
+ height:107px
+}
+
+#board-info h1 {
+ margin:25px 0 0 95px;
+ border-bottom:1px solid;
+ border-color: #5b6770
+}
+
+#board-info #board-info-bottom a {color:#5b6770}
+
+#board-info h1>a {
+    font-weight: 1500;
+    font-family: 'Cafe24Ohsquare';
+}
+
+#board-info h1>a:nth-child(1) {
+    font-size: 40px;
+    color: #5b6770
+}
+
+#board-info h1>a:hover {
+    color: #5b6770;
+    font-weight: 1500;
+    transition: all 500ms ease-in-out
+}
+
+
+
+
+
+
+
+
+/* 방문자 */
+#board-info #viewers-area {
+  color: #ff5200;
+  font-size: 20px;
+  font-family: BMEULJIRO;
+  position: relative;
+  top: 12px;
+  left: 2px
+}
+
+#board-info #viewers-area #viewers:before {
+  content: url(https://nrirn.github.io/10ming_CSS/tsu_01.png);
+  position: relative;
+  top: 9px;
+  left: -4px;
+}
+
+#board-info #viewers-area #viewers:after {
+  content: url(https://nrirn.github.io/10ming_CSS/tsu_02.png);
+  cursor: text;
+  position: relative;
+  top: 3px;
+  left: 2px
+}
+
+#viewers-area #viewers{
+float: right;
+margin: -40px 0 0 3px;
+}
+
+
+
+/* 카테고리 */
+#article-list #article-list-category,
+#article-list #article-list-category>a,
+#article-list #article-list-category>a.active {
+ background:0 0;
+ transition:.5s ease-in-out
+}
+
+#article-list #article-list-category {
+ 
+ border:2px solid #f3f3f3;
+ border-radius: 7px 7px 0px 0px;
+ border-bottom: none
+}
+
+
+
+
+
+
+
+/* 추천수 */
+#article-list>.article-list-row>.item>.list-header>span {
+ display:inline-flex;
+ padding:3px 5px;
+ justify-content:center;
+ align-items:center;
+ background-color:#5b6770
+}
+
+/* 댓글수 및 닉네임 색상 */
+#article-list>.article-list-row>.item>.list-title>.list-writer.logged>span,
+#article-list>.article-list-row>.item>.list-title>small.comment-count,
+#article-reply-area>.header h5,
+#main .menu-wrapper>a>em,
+#main .menu-wrapper>a>i.fa.fa-square,
+header {
+ color:#5b6770
+}
+
+
+/* 닉네임 폭 */
+#article-list>.article-list-row>.item>.list-title>.list-writer>span {
+  width: 120px !important;
+}
+
+
+/* 게시글 배경 */
+#article-list>.article-list-row.notice {
+    background-color: #a3aaae;
+}
+
+#article-list>.article-list-row.hot {
+    background-color: #efefef;
+}
+
+
+
+
+
+
+/* 인기글 애니메이션 효과 */
+@keyframes rotation{ from { transform: rotate(0deg); } to { transform: rotate(360deg); } } 
+span.a-badge i.fa.fa-star { animation: rotation 2s infinite; }
+
+/* 하트 애니메이션 효과 */
+.fa-heart:before {
+    color: #ff8d8d;
+    animation: pulse 1.5s infinite;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(255,141,141, 0.4);
+}
+
+.fa-eye:before {
+    color: #ff8d8d;
+    content: "\f06e";
+}
+
+.fa-commenting:before {
+    color: #ff8d8d;
+    content: "\f27a";
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(255,141,141, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(255,141,141, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(255,141,141, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(255,141,141, 0.4);
+    box-shadow: 0 0 0 0 rgba(255,141,141, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(255,141,141, 0);
+      box-shadow: 0 0 0 10px rgba(255,141,141, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(255,141,141, 0);
+      box-shadow: 0 0 0 0 rgba(255,141,141, 0);
+  }
+}
+
+
+
+/* 프사 메뉴 */
+#board-info #board-info-bottom a {
+    color: #5b6770;
+    font-weight: 400;
+    font-size: 12px;
+    position: relative;
+    left: 96px;
+}
+
+
+
+/* 눈알 */
+#article-list #article-option-area>#article-option-area-toggle-btn {
+    position: relative;
+    right: 20px;
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+/* 마우스오버 효과 */
+#article-list .article-list-row:hover, #article-list div.article-list-row.notice:hover, #article-neighbor-list>div:hover {
+   transform: scale(1.02);
+   transition: all 0.3s ease-in-out;
+   box-shadow: 3px 5px 10px -5px black;
+}
+
+
+
+/* 트게더 메인으로(높낮이포함) */
+header .row>div:nth-child(1)>a {
+    background-repeat: no-repeat;
+    background-image: url(https://nrirn.github.io/10ming_CSS/main.png);
+    background-size: 140px;
+    width: 140px;
+    height: 50px;
+    display: block;
+    margin-top: 2em;
+    position: relative;
+    top: 8px;
+    left: 0px
+}
+
+/* 트게더 로고 on off */
+header .row>div:nth-child(1)>a img {
+    display: none;
+}
+
+/* 타이틀 이미지  */
+#board-info > h1 > a::before {
+    content: url(https://nrirn.github.io/10ming_CSS/logo.png);
+    left: 500px;
+    top: 5px;
+    position: absolute;
+    top: -150px;
+    left: 302px
+}
+
+.fa-user:before {
+    display: none;
+}
+
+
+
+/* 링크 색상 */
+#article-reply-area #reply-best-area .reply>.reply-header>.reply-writer.logged,
+#article-reply-area #reply-real-area .reply>.reply-header>.reply-writer.logged,
+#board-info #board-info-bottom a,
+.reply-header .time,
+a:hover,
+header #header-bar a.dropdown-toggle {
+    color:#5b6770
+}
+a {
+    color:#333333
+}
+
+
+
+
+/* 페이지 버튼 */
+.pagination>li>a,
+.pagination>li>span {
+    color: #5b6770;
+    border-color: #5b6770;
+}
+
+.pagination>.active>a:hover,
+.pagination>.active>a {
+    color: white;
+    border-color: #5b6770;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #5b6770;
+}
+
+.pagination>li>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span,
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+    color: white;
+    border-color: #5b6770;
+    background-color: #5b6770;
+}
+
+
+
+
+/* 하단 검색창 버튼 */
+div #article-list #boardSearchForm>input[type=text]:focus {
+    border-color: #5ae2aa;
+    box-shadow:0 0 5px #5ae2aa
+}
+
+
+
+/* go to top */
+#movetotop img {
+    display: none
+}
+
+#movetotop {
+    display: inline-block;
+    opacity: 1;
+    background: url(https://nrirn.github.io/10ming_CSS/gototop_01.png);
+    width: 220px;
+    height: 350px;
+    background-size: contain;
 }
