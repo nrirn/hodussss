@@ -197,14 +197,14 @@ header #header-bar #header-top-notice strong.notice-badge {
   font-size: 20px;
   font-family: BMEULJIRO;
   position: relative;
-  top: 12px;
+  top: 23px;
   left: 2px
 }
 
 #board-info #viewers-area #viewers:before {
   content: url(https://nrirn.github.io/hodussss/tsu_01.png);
   position: relative;
-  top: 9px;
+  top: 4px;
   left: -4px;
 }
 
@@ -465,7 +465,7 @@ div #article-list #boardSearchForm>input[type=text]:focus {
 #movetotop {
     display: inline-block;
     opacity: 1;
-    background: url(https://nrirn.github.io/hodussss/gototop_01.png);
+    background: url(https://nrirn.github.io/hodussss/gototop.gif);
     width: 220px;
     height: 350px;
     background-size: contain;
