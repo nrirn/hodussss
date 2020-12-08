@@ -470,3 +470,13 @@ div #article-list #boardSearchForm>input[type=text]:focus {
     height: 160px;
     background-size: contain;
 }
+
+
+/*기본형*/
+body{
+     background-image: url(https://nrirn.github.io/hodussss/cf00.png); /*url(이미지 경로/폴더경로or온라인url)*/
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center top;
+     background-size: contain;
+}
